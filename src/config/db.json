@@ -1,0 +1,12 @@
+{
+    "development": {
+        "username": "root",
+        "password": "secret",
+        "database": "foxy_project56",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "dialect": "mysql",
+        "timezone": "Europe/London",
+        "logging": false
+    }
+}
