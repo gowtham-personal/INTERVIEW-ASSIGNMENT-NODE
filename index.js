@@ -2,11 +2,12 @@ const createError = require("http-errors");
 const express = require("express");
 const cookieParser = require("cookie-parser");
 const fs = require("fs");
-const PORT = 3010;
+const PORT = process.env.PORT || 3010;
 const logger = require("morgan");
 let app = express();
 var indexRouter = require("./src/routes/indexRoutes");
 var authRouter = require("./src/routes/authRoutes");
+var geoCodingRouter = require("./src/routes/geoCodingRoutes");
 const cors = require("cors");
 
 app.use(cors());
@@ -23,7 +24,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use("/", indexRouter);
-app.use("/api/auth", authRouter);
+app.use("/api/geocode", geoCodingRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
@@ -41,7 +42,7 @@ app.use((err, req, res, next) => {
   res.send("error");
 });
 
-app.listen(process.env.PORT || PORT, () =>
+app.listen(PORT, () =>
   console.log(`Express currently running on port ${PORT}`)
 );
 
