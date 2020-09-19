@@ -125,3 +125,5 @@
 ::1 - - [19/Sep/2020:10:49:52 +0000] "GET /api/geocode/reverse?lat=60.2299&long=11.1663 HTTP/1.1" 404 5 "-" "PostmanRuntime/7.26.1"
 ::1 - - [19/Sep/2020:10:50:29 +0000] "GET /api/geocode/reverse?lat=60.2299&long=11.1663 HTTP/1.1" 200 670 "-" "PostmanRuntime/7.26.1"
 ::1 - - [19/Sep/2020:10:51:03 +0000] "GET /api/geocode/reverse?lat=60.2299&long=11.1663 HTTP/1.1" 200 670 "-" "PostmanRuntime/7.26.1"
+::1 - - [19/Sep/2020:11:36:06 +0000] "GET /api/geocode/forward?street=Ungargasse%2017&state=Vienna&country=Austria&postalcode=1060&polygon=0 HTTP/1.1" 200 525 "-" "PostmanRuntime/7.26.1"
+::1 - - [19/Sep/2020:11:36:13 +0000] "GET /api/geocode/forward?street=Ungargasse%2017&state=Vienna&country=Austria&postalcode=1060&polygon=1 HTTP/1.1" 200 871 "-" "PostmanRuntime/7.26.1"

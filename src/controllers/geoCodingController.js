@@ -26,7 +26,7 @@ exports.getForwardGecoding = async (req, res) => {
   }`;
   if (queryDetails) {
     var forwardGeoCodingResponse = await getMethod(
-      `${API_URL_CONSTANTS.FORWARD_GEOCODING_URl}?q${queryDetails}&format=geocodejson&&polygon_geojson=1`
+      `${API_URL_CONSTANTS.FORWARD_GEOCODING_URl}?q${queryDetails}&format=geocodejson&&polygon_geojson=${req.query.polygon}`
     );
   } else {
     res.status(400).send("Bad Request");
